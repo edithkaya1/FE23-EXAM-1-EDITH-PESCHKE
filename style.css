@@ -64,11 +64,13 @@ body {
     align-items:center;
     color: var(--textheader);
     text-shadow: 2px 2px 0 rgb(154, 144, 144);
+    transition: transform 0.2s;
 }
 
 .top-header a:hover {
     background-color: var(--hoovercolor);
     border-radius: 20%;
+    transform: scale(1.2);
 }
 
 .top-header a:visited {
@@ -203,7 +205,7 @@ body {
     align-items: center;
     align-content:center;
     margin-inline: 1rem;
-    gap: 1rem;    
+    gap: 1rem;
 }
 
 .site-header p {
@@ -224,6 +226,7 @@ body {
     font-weight: 400;
     font-style: normal;
     margin-inline: 1rem;
+    transition: transform 0.2s;    
 }
 
 .top-header1 a {
@@ -240,6 +243,7 @@ body {
 .top-header1 a:hover {
     background-color: var(--hoovercolor);
     border-radius: 20%;
+    transform: scale(1.2);
 }
 
 .top-header1 a:visited {
@@ -294,6 +298,13 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+#p-about3 {
+    font-size: 1.5rem;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #68904D;
+}
 
 /* Recipe of the month site */
 h1 {
@@ -326,7 +337,7 @@ h2 {
 }
 
 .recipe-img { 
-	width: 55%; 
+	width: 50%; 
 	height: 650px; 
 	margin: 2em auto; 
 	border:1px solid rgb(9, 12, 9);
@@ -371,7 +382,7 @@ h2 {
 }
 
 /* Mobile phone */
-@media screen and (width <= 480px)
+@media screen and (max-width: 480px)
 {
     .card-container {
         grid-template-columns: repeat 1fr;
@@ -411,9 +422,19 @@ h2 {
         font-size: 0.8rem;
     }
 
+    h1 {
+        font-size: 3rem;
+        margin-block: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-block: 0.5rem;
+    }
+
     .recipe-img { 
-        width: 50%; 
-        height: 200px; 
+        width: 40%; 
+        height: 300px; 
     }
 
     .container {
@@ -424,8 +445,8 @@ h2 {
 
     .container {
         display: flex;
-        gap: 1rem;
-        margin-inline: 3rem;
+        gap: 0.5rem;
+        margin-inline: 1rem;
     }
     
     #header1 {
@@ -450,10 +471,103 @@ h2 {
     #p-about2 {
         font-size: 0.8rem;
     }
+
+    #p-about3 {
+        font-size: 0.8rem;
+    }
 }
 
-/* Laptop and tablet */
-@media screen and (width < 1200px)
+/* Handy*/
+@media screen and (max-width: 480px) and (minx-width: 200px)
+{
+    .card-container {
+        grid-template-columns:  1fr;
+    } 
+
+    #logo {
+        width: 10%;
+    }
+
+    .top-header {
+        gap: 0.5rem;
+    }
+    
+    .top-header a {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .nav-links a{
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        gap: 0.8rem;
+    }
+    
+    .footer-links a{
+        font-size: 1rem;
+    }
+
+    .page-footer p {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-block: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-block: 0.5rem;
+    }
+
+    .recipe-img { 
+        width: 40%; 
+        height: 250px; 
+    }
+
+    .container {
+        display: flex;
+        gap: 0.8rem;
+        margin-inline: 0.8rem;
+    }
+    
+    #header1 {
+        font-size: 3rem;
+    }
+    
+    .container-about {
+        margin-inline: 2rem;
+        gap: 1rem;
+    }
+    
+    .container-about .image {
+        width: 70%;
+        height: 400px;
+        margin-block: 8rem;
+    }
+    
+    #p-about1 {
+        font-size: 2em;
+    }
+    
+    #p-about2 {
+        font-size: 1.5rem;
+    }
+
+    #p-about3 {
+        font-size: 1.5rem;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1200px) and (min-width: 768px)
 {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
@@ -493,19 +607,29 @@ h2 {
         font-size: 0.8rem;
     }
 
+    h1 {
+        font-size: 3.5rem;
+        margin-block: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin-block: 0.5rem;
+    }
+
     .recipe-img { 
         width: 50%; 
-        height: 400px; 
+        height: 450px; 
     }
 
     .container {
         display: flex;
-        gap: 1.5rem;
-        margin-inline: 3rem;
+        gap: 0.8rem;
+        margin-inline: 0.8rem;
     }
     
     #header1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     
     .container-about {
@@ -516,7 +640,7 @@ h2 {
     .container-about .image {
         width: 70%;
         height: 400px;
-        margin-block: 8rem;
+        margin-block: 5rem;
     }
     
     #p-about1 {
@@ -524,6 +648,10 @@ h2 {
     }
     
     #p-about2 {
+        font-size: 1.5rem;
+    }
+
+    #p-about3 {
         font-size: 1.5rem;
     }
 }
