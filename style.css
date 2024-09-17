@@ -478,7 +478,7 @@ h2 {
 }
 
 /* Handy*/
-@media screen and (max-width: 480px) and (minx-width: 200px)
+@media screen and (max-width: 480px)
 {
     .card-container {
         grid-template-columns:  1fr;
@@ -567,7 +567,7 @@ h2 {
     }
 }
 /* Tablet */
-@media screen and (max-width: 1200px) and (min-width: 768px)
+@media screen and (max-width: 1200px) and (min-width: 481px)
 {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
